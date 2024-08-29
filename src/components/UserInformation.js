@@ -81,6 +81,7 @@ function UserInfo() {
         <Table
           records={records}
           selectedRows={selectedRows}
+          firstIndex={firstIndex}
           handleCheckbox={handleCheckbox}
         />
       </div>

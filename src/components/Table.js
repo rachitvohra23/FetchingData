@@ -1,4 +1,4 @@
-function Table({ records, selectedRows, handleCheckbox }) {
+function Table({ records, selectedRows, handleCheckbox,firstIndex}) {
   return (
     <table className="min-w-full border-collapse border border-gray-400">
       <thead>
@@ -28,7 +28,7 @@ function Table({ records, selectedRows, handleCheckbox }) {
                 onChange={() => handleCheckbox(user.login.uuid)}
               ></input>
             </td>
-            <td className="font-bold border-2 border-black px-4 py-2">{index + 1}</td>
+            <td className="font-bold border-2 border-black px-4 py-2">{(firstIndex/10)*10+index+1}</td>
             <td className="border-2 border-black px-4 py-2">
               <img
                 src={user.picture.thumbnail}
